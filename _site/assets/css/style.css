@@ -107,17 +107,29 @@ body {
 /* Full Page Image Header Area */
 
 .header {
-  display: table;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background: url(../img/bg.jpg) no-repeat center center fixed; 
+ display: flex;
+ justify-content: center; /* align horizontal */
+ align-items: center; /* align vertical */
+ height: 100%;
+ width: 100%;
+ position: relative;
+
+}
+.header:after {
+  content: "";
+  background: url(../img/profile.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
-
 /* Intro */
 
 .intro {
@@ -219,8 +231,8 @@ i.scroll:hover {
 }
 
 *
- * Main column and sidebar layout
- */
+* Main column and sidebar layout
+*/
 
 .blog-main {
   font-size: 18px;
@@ -262,7 +274,7 @@ i.scroll:hover {
  * Blog posts
  */
 
-.blog-post {
+ .blog-post {
   margin-bottom: 60px;
 }
 .blog-post-title {
@@ -279,27 +291,39 @@ i.scroll:hover {
  * Footer
  */
 
-.blog-footer {
+ .blog-footer {
   padding: 40px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
 }
+
+/* navbar overwriting*/
+.navbar {
+  padding: 20px 0;
+  border-bottom: 0;
+  letter-spacing: 1px;
+  background: 0 0;
+  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+  padding: 0;
+  background-color: #000;
+}
+
+.navbar-custom.top-nav-collapse {
+  border-bottom: 1px solid rgba(255,255,255,.3);
+}
 /* Responsive */
 
 @media (max-width: 768px) {
-  
-  .header {
-  background: url(../img/bg.jpg) no-repeat center center scroll; 
-  }
 
   .callout {
-  background: url(../img/callout.jpg) no-repeat center center scroll; 
+    background: url(../img/callout.jpg) no-repeat center center scroll; 
   }
-
-  .map {
-  height: 75%;
-  }
-
+  
 }

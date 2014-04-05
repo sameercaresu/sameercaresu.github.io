@@ -21,6 +21,14 @@ $(function() {
 });
 */
 $(function() {
+    $(window).scroll(function() {
+        if ($(".navbar").offset().top > 50) {
+            console.log('hi');
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        }
+    });
     $("#menu-close").click(function(e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
