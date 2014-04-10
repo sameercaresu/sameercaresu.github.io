@@ -6,6 +6,23 @@ body {
   width: 100%;
 }
 
+.brand{
+  font-family: 'Monoton', cursive, Arial, serif;
+  font-size: 28px;
+  color: #11772D;
+}
+
+.fa-road{
+  font-size: 26px;
+  color: #11772D;
+}
+
+.navbar-nav > li > a {
+  color: #11772D;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .vert-text {
   display: table-cell;
   vertical-align: middle;
