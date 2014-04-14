@@ -134,7 +134,7 @@ body {
 }
 .header:after {
   content: "";
-  background: url(../img/profile.jpg) no-repeat center center fixed; 
+  background: url(../img/.e.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -251,10 +251,7 @@ i.scroll:hover {
 * Main column and sidebar layout
 */
 
-.blog-main {
-  font-size: 18px;
-  line-height: 1.5;
-}
+
 
 /* Sidebar modules for boxing content */
 .sidebar-module {
@@ -272,7 +269,10 @@ i.scroll:hover {
   margin-bottom: 0;
 }
 
-
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
 
 /* Pagination */
 .pager {

@@ -1,44 +1,91 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    </head>
-    <body>
+    <!-- Add custom CSS here -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+    <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
-          {{ content }}
+    <!-- Custom styles for this template -->
+    <link href="assets/css/cover.css" rel="stylesheet">
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
-              </p>
+    <!-- Google Fonts -->
+
+    <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">
+                        Sameer KC
+                    </h3>
+                    <ul class="nav masthead-nav">
+                        <li class="active">
+                            <a id="home" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a id="blog" href="#">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
+            <div id="main-content">
+                <!-- Ajax content is being loaded here -->
+                {{ content }}
             </div>
-          </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <a class="fa fa-github fa-2x" href="#blog">
+                    </a>
+
+                    <a class="fa fa-twitter fa-2x" href="#contact">
+                    </a>
+                </div>
+            </div>
+
         </div>
 
-    </body>
+    </div>
+
+</div>
+<!-- JavaScript -->
+<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+
 </html>
+

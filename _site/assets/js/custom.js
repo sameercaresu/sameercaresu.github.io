@@ -1,27 +1,8 @@
-//jQuery to collapse the navbar on scroll
-/*
-$(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-});
+$(function () {
+    // firts thing is load home.html by default to main-content div
+    $("#main-content").load("home.html");
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-
-    $('.page-scroll a').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-*/
-$(function() {
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(".navbar").offset().top > 50) {
             console.log('hi');
             $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -29,15 +10,15 @@ $(function() {
             $(".navbar-fixed-top").removeClass("top-nav-collapse");
         }
     });
-    $("#menu-close").click(function(e) {
+    $("#menu-close").click(function (e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
     });
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=#]:not([href=#])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
             var target = $(this.hash);
@@ -49,5 +30,13 @@ $(function() {
                 return false;
             }
         }
+    });
+
+    // loading html pages for home and blog
+    $('#home').click(function () {
+        $("#main-content").load("home.html");
+    });
+    $('#blog').click(function () {
+        $("#main-content").load("blog.html");
     });
 });
